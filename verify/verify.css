@@ -1,0 +1,44 @@
+    body{
+          background-image: url(../images/bg1.jpg) ;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+    }
+
+
+
+
+.user-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .25rem;
+    margin-top: 1rem;
+}
+
+.card {
+    border: 2px solid black;
+    background-color: white;
+    padding: .5rem;
+    background: transparent;
+  /*  backdrop-filter: blur(20px); */
+    transition: 0.5s;
+}
+/*.card:hover {
+    backdrop-filter: blur(5px);
+}*/
+
+.card > header {
+    margin-bottom: .25rem;
+
+}
+
+.card > body {
+    font-size: .8rem;
+    color: #777;
+}
+
+input {
+  transform: scale(2);
+
+}
