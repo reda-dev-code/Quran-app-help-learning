@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+       @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&display=swap');
+       * {
+  font-family: "Google Sans", sans-serif ;
+}
+        body {
+    background-color: hsla(0, 1%, 50%, 0.258);
+    border: 1px solid black;
+    height: 100vh;
+    width: 100%;
+
+}
+
+    .topInfo{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        height: 40vh;
+        width: 100%;
+    /*    border: 2px solid rgb(255, 14, 14);*/
+    }
+    #title {
+        color: hsl(0, 0%, 2%);
+        font-size: 24px;
+    }
+    .buttons{
+        flex-direction: row;
+        align-items: center;
+
+        height: 40vh;
+        width: 100%;
+      /*  border: 2px solid rgb(105, 255, 140);*/
+    }
+    .divbutton{
+        border: 2px solid black;
+ 
+        height: 45%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    </style>
+</head>
+<body>
+     <div class="menu">
+        <div class="topInfo">
+        <h1 id="title">Bienvenue</h1>
+        </div>
+        <div class="buttons">
+        <div class="divbutton">
+            <button class="button" id="button1" onclick="start()">Commencer</button>
+       </div><div class="divbutton">
+            <button commandfor="tutorial" command="toggle-popover" class="button" id="button2" >How to use it</button>
+            <button commandfor="inputinfo" command="toggle-popover" id="testbutton" >Pass the test</button>
+
+        </div>
+        </div>
+                    <div popover id="tutorial">
+                <h3>Tutorial</h3>
+                <br>
+                <p>
+                    Salamoualikoum dear user. This is the developer. I will show you
+                    how to use our website. First of all, what is 'name of website'! 
+                    it's an amazing interactif website wer user can track their progress 
+                    in the quran. For now, we only have juzamma. We hope, inshallah, that our website
+                    will have all the quran.So, first of all, to understand how you memorize the quran, 
+                    you will have to pass a little test. This test is very easy with one question. You 
+                    just have to tell us how much time does it take for you to forget an ayah(don t worry, it doesn t need to be precise).
+                    Then, you will be in the main page. Here they will be a progress bar to track your learning of juzamma.The progress bar
+                    should be at 0%. It's totaly normal because you didn t pass the quiz. You will have to click the button,check my learning 
+                    progress and their, you will check the sourah you know. Now, the progress should have change. The website will do an algorithm
+                    so that every time you go check, will find the progress decreasing, until it reaches 0. 
+                </p>
+            </div>
+            <div id="inputinfo" popover>
+                <label for="">How many days does it take you ,approximativly, to forget 10 ayah</label>
+                <input type="number" id="forgetinput">
+                <button onclick="saveInfo()">Confirm</button>
+            </div>
+    </div>
+    <script src="verifylog.js">
+
+    </script>
+</body>
+</html>
